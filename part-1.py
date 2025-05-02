@@ -32,5 +32,13 @@ def bunny(count):
 
 
 # is_nested_parens
-
+def is_nested_parens(parens):
+    if parens == "":
+        return True
+        
+    if len(parens) == 1:
+        return False
+    
+    if parens[0] == "(" and parens[-1] ==")":
+        return is_nested_parens(parens[1:-1])
 
